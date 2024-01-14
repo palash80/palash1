@@ -1,6 +1,4 @@
-
-
-def call(String repoUrl = 'https://github.com/palash80/palash1.git', String targetDir = 'default-target-dir') {
+def call(String repoUrl, String targetDir) {
     if (!repoUrl || !targetDir) {
         error("Repository URL and target directory are required.")
     }
