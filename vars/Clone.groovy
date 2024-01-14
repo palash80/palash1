@@ -4,8 +4,8 @@ def call(String repoUrl, String targetDir) {
     }
 
     try {
-        sh("git clone ${repoUrl} ${targetDir}")
+        sh "git clone ${repoUrl} ${targetDir}"
     } catch (Exception e) {
-        error("Failed to clone repository: ${e.message}")
+        error "Failed to clone repository: ${e.message}"
     }
 }
