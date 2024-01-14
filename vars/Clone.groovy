@@ -1,6 +1,6 @@
-// shared-library/vars/cloneRepo.groovy
 
-def call(String repoUrl, String targetDir) {
+
+def call(String repoUrl = 'https://github.com/palash80/palash1.git', String targetDir = 'default-target-dir') {
     if (!repoUrl || !targetDir) {
         error("Repository URL and target directory are required.")
     }
@@ -11,4 +11,3 @@ def call(String repoUrl, String targetDir) {
         error("Failed to clone repository: ${e.message}")
     }
 }
-
